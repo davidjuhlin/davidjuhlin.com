@@ -26,4 +26,5 @@ open('docs/index.html', 'w').write(html)
 for f in ['ws-hero.jpg', 'cb-site.jpg', 'cb-live.jpg', 'og.jpg', 'favicon.svg', 'resume.pdf']:
     shutil.copy(f, 'docs/' + f)
 open('docs/.nojekyll', 'w').write('')
+open('docs/CNAME', 'w').write('davidjuhlin.com\n')  # custom domain (GitHub Pages)
 print('built docs/:', sorted(os.listdir('docs')))
