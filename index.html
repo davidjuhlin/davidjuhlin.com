@@ -1,0 +1,284 @@
+<title>David Juhlin</title>
+<meta name="description" content="David Juhlin, product manager: discovery, strategy and AI-native product development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one calm reading column; results set as a ledger; work as two showcase pieces; career as a dated timeline. */
+:root {
+  --bg: #f6f7f5; --surface: #ffffff; --ink: #18211d; --muted: #5a6560; --line: #dce2de;
+  --accent: #2f6b57; --accent-wash: #e3eee9;
+  --display: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111614; --surface: #19201d; --ink: #e7ece9; --muted: #a1aca6; --line: #2b3430;
+  --accent: #82c6a9; --accent-wash: #1d2f28; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #111614; --surface: #19201d; --ink: #e7ece9; --muted: #a1aca6; --line: #2b3430;
+  --accent: #82c6a9; --accent-wash: #1d2f28; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.65; }
+.wrap { max-width: 66rem; margin: 0 auto; padding-inline: max(16px, 5vw); padding-block: 1.5rem 4rem; display: grid; gap: 4.5rem; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.15; }
+h3 { font-size: 1.35rem; line-height: 1.2; }
+p { margin: 0; }
+.label { font-family: var(--mono); font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* Top bar */
+.top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.name { font-family: var(--display); font-weight: 700; font-size: 1.1rem; color: var(--ink); text-decoration: none; }
+.top nav { display: flex; gap: 1.25rem; flex-wrap: wrap; font-family: var(--display); font-size: .95rem; }
+.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
+.hero h1 { font-size: clamp(2.3rem, 5.4vw, 3.6rem); line-height: 1.04; margin-top: .6rem; }
+.hero .lede { margin-top: 1.25rem; max-width: 36rem; color: var(--ink); }
+.links { margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+.btn { font-family: var(--display); font-weight: 600; font-size: .98rem; padding: .62rem 1rem; border-radius: 8px; text-decoration: none; border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.email { font-family: var(--mono); font-size: .88rem; color: var(--muted); user-select: all; }
+
+/* Results ledger */
+.ledger { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.25rem 1.4rem; }
+.ledger ol { list-style: none; margin: .9rem 0 0; padding: 0; display: grid; }
+.ledger li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; padding-block: .8rem; border-top: 1px solid var(--line); align-items: baseline; }
+.ledger li:first-child { border-top: 0; padding-top: .2rem; }
+.ledger .num { font-family: var(--display); font-weight: 700; font-size: 1.45rem; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ledger .what { font-size: .95rem; color: var(--muted); line-height: 1.45; }
+
+/* Section heads */
+.section { display: grid; gap: 1.75rem; }
+.section > header { display: grid; gap: .5rem; max-width: 40rem; }
+.section > header p { color: var(--muted); }
+
+/* Work pieces */
+.piece { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 2.5rem; align-items: start; padding-top: 2rem; border-top: 1px solid var(--line); }
+.piece:first-of-type { border-top: 0; padding-top: 0; }
+.piece .meta { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+.piece .body { display: grid; gap: 1rem; min-width: 0; }
+.piece ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .45rem; }
+.piece li::marker { color: var(--accent); }
+.shot { margin: 0; display: grid; gap: .5rem; }
+.shot img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); display: block; }
+.shot figcaption { font-size: .85rem; color: var(--muted); }
+.callout { background: var(--accent-wash); border-radius: 10px; padding: 1rem 1.15rem; font-style: italic; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .75rem; }
+.fact { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: .9rem 1rem; display: grid; gap: .2rem; }
+.fact b { font-family: var(--display); font-size: 1.35rem; color: var(--accent); font-variant-numeric: tabular-nums; }
+.fact span { font-size: .88rem; color: var(--muted); line-height: 1.4; }
+.go { font-family: var(--display); font-weight: 600; }
+.go .meta { font-weight: 400; }
+.built { display: grid; gap: .5rem; border-left: 3px solid var(--accent); padding-left: 1rem; }
+.built .label { color: var(--accent); }
+.cue-media { display: grid; gap: 1rem; min-width: 0; }
+.cue-row { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
+.cue-row .facts { grid-template-columns: minmax(0, 1fr); }
+.shot.app img { max-width: 100%; }
+
+/* How I work: three pillars, then the approach as a real sequence */
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.pillars li { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.25rem 1.3rem; display: grid; gap: .45rem; align-content: start; }
+.pillars .label { color: var(--accent); }
+.pillars h3 { font-size: 1.18rem; }
+.pillars p { color: var(--muted); font-size: .97rem; }
+.approach { display: grid; gap: 1rem; max-width: 46rem; }
+.approach h3 { font-size: 1.18rem; }
+.steps { margin: 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: 1rem; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: .8rem; align-items: baseline; }
+.steps li::before { content: counter(step); font-family: var(--display); font-weight: 700; color: var(--accent); background: var(--accent-wash); border-radius: 50%; width: 1.9rem; height: 1.9rem; display: grid; place-items: center; font-size: .95rem; }
+.steps b { font-family: var(--display); font-weight: 600; }
+.steps em { display: block; font-style: normal; font-size: .9rem; color: var(--muted); margin-top: .2rem; }
+.steps em::before { content: "Example · "; font-family: var(--mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.proof { font-size: .9rem !important; color: var(--ink) !important; border-top: 1px solid var(--line); padding-top: .6rem; margin-top: .2rem; }
+.proof span { display: block; font-family: var(--mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: .15rem; }
+.ai-note { background: var(--accent-wash); border-radius: 14px; padding: clamp(1.25rem, 3.5vw, 2rem); display: grid; gap: .7rem; max-width: 52rem; }
+.ai-note .label { color: var(--accent); }
+.ai-note h3 { font-size: clamp(1.25rem, 2.4vw, 1.55rem); }
+.ai-note p { max-width: 44rem; }
+
+/* Timeline */
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; }
+.timeline li { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 1.5rem; padding-block: 1.1rem; border-top: 1px solid var(--line); }
+.timeline .when { font-family: var(--mono); font-size: .82rem; color: var(--muted); padding-top: .2rem; font-variant-numeric: tabular-nums; }
+.timeline h3 { font-size: 1.08rem; }
+.timeline .role { color: var(--muted); font-size: .95rem; }
+.timeline p.note { margin-top: .35rem; font-size: .97rem; max-width: 44rem; }
+.edu { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem 2rem; font-size: .97rem; }
+.edu p { color: var(--muted); }
+
+/* Contact */
+.contact { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: clamp(1.4rem, 4vw, 2.4rem); display: grid; gap: 1rem; }
+.contact p { max-width: 36rem; color: var(--muted); }
+footer { font-family: var(--mono); font-size: .78rem; color: var(--muted); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+@media (max-width: 760px) {
+  .hero, .piece, .cue-row { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
+  .timeline li { grid-template-columns: minmax(0, 1fr); gap: .25rem; }
+  .ledger li { grid-template-columns: 6.5rem minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) { .btn { transition: transform .15s ease; } .btn:hover { transform: translateY(-1px); } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="name" href="#">David Juhlin</a>
+    <nav aria-label="Sections"><a href="#work">What I’ve built</a><a href="#how">How I work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <section class="hero" aria-labelledby="hello">
+    <div>
+      <p class="label">Product manager · South Florida · U.S. &amp; Swedish citizen</p>
+      <h1 id="hello">I figure out what to build, and then I build it.</h1>
+      <p class="lede">I’ve spent more than ten years as a product leader in B2B SaaS, enterprise software and AI. I started out in user research, so I begin by listening to customers, then turn what I hear into a clear strategy and products that get used.</p>
+      <p class="lede">These days I also build. With AI as my engineering partner, I designed and built the Wicked Sidekick website and Cuebright, a Mac app and its website, myself.</p>
+      <div class="links">
+        <a class="btn primary" href="resume.pdf">Résumé</a>
+        <a class="btn" href="https://www.linkedin.com/in/david-juhlin/">LinkedIn</a>
+        <span class="email">nilsdavidjuhlin@gmail.com</span>
+      </div>
+    </div>
+    <aside class="ledger" aria-label="A few results">
+      <p class="label">A few results</p>
+      <ol>
+        <li><span class="num">$35M+</span><span class="what">ARR in the enterprise SaaS portfolio I owned at Brightcove</span></li>
+        <li><span class="num">$7M→$10M</span><span class="what">ARR growth of the OTT business</span></li>
+        <li><span class="num">~50%</span><span class="what">less time per task after the AI workflow pilot I led at Broadcom</span></li>
+        <li><span class="num">40+</span><span class="what">customers in a design-partner program I built</span></li>
+        <li><span class="num">~6 mo</span><span class="what">of development avoided by validating early with customers at PTC</span></li>
+      </ol>
+    </aside>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-title">
+    <header>
+      <p class="label">What I’ve built</p>
+      <h2 id="work-title">One product I built end to end, one I lead</h2>
+      <p>I don’t stop at the requirements. I built Cuebright myself with AI coding agents. At Wicked Sidekick I built the website and define the product our engineers build.</p>
+    </header>
+
+    <article class="piece cue first">
+      <div class="body">
+        <p class="meta">Cuebright · Built end to end with AI · 2026</p>
+        <h3>A Mac app that answers customer questions while you’re on the call</h3>
+        <p>Cuebright transcribes your calls, answers questions from your own documents while you talk, and writes the summary and action items when you hang up. All of it runs on the Mac.</p>
+        <div class="built">
+          <p class="label">What I built</p>
+          <ul>
+            <li><strong>The Mac app:</strong> live transcription, answers from your documents, summaries and action items, accounts and people, and a Sales pack with deal notes and follow-up emails (coming in the next release).</li>
+            <li><strong>The website,</strong> <a href="https://cuebright.com">cuebright.com</a>: product story, download, and download counting that respects privacy.</li>
+            <li><strong>Everything around it:</strong> signed installers, automatic updates, and a test suite of 232 questions that every change has to pass.</li>
+          </ul>
+        </div>
+        <p>I set the outcomes and made the product calls; AI coding agents wrote the code. From first prototype to 15 public releases in two months.</p>
+        <p class="go"><a href="https://cuebright.com">Visit cuebright.com</a></p>
+      </div>
+      <div class="cue-media">
+        <figure class="shot">
+          <img src="cb-site.jpg" alt="The cuebright.com homepage: 'The answer is in your documents. Cuebright finds it while you're still on the call.' with an example call and an answer card." width="1200" height="712">
+          <figcaption>The cuebright.com website.</figcaption>
+        </figure>
+        <div class="cue-row">
+          <figure class="shot app">
+            <img src="cb-live.jpg" alt="The Cuebright Live panel, ready to record a call: meeting title, Ask, notes, microphone and the consent checkbox." width="652" height="900">
+            <figcaption>The app’s Live panel, before a call.</figcaption>
+          </figure>
+          <div class="facts" aria-label="Cuebright in numbers">
+            <div class="fact"><b>15</b><span>public releases in two months</span></div>
+            <div class="fact"><b>~95%</b><span>of 232 test questions answered correctly (16 GB Macs)</span></div>
+            <div class="fact"><b>0</b><span>call or document content sent off the Mac</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="piece">
+      <div class="body">
+        <p class="meta">Wicked Sidekick · Founder &amp; product lead · 2025 to today</p>
+        <h3>Helping product teams decide what to build</h3>
+        <p>Wicked Sidekick turns customer conversations into evidence-backed opportunities, clearer priorities and product-ready drafts. Our engineers build the product; I define it.</p>
+        <div class="built">
+          <p class="label">My part</p>
+          <ul>
+            <li><strong>Built the new website</strong> myself, with AI: positioning, pricing, the waitlist and the access-request flow.</li>
+            <li><strong>Defined the product:</strong> the information model, where transcripts become evidence, evidence becomes needs and opportunities, and every report traces back to its source; and how the app should work, in specifications and day-to-day clarifications for the engineers building it.</li>
+            <li><strong>Talked to customers:</strong> 25+ discovery interviews shaped what we build first.</li>
+            <li><strong>Secured our first alpha customer,</strong> a 700-person enterprise SaaS company.</li>
+            <li><strong>Grew the team</strong> from 2 to 9 part-time contributors.</li>
+          </ul>
+        </div>
+        <p class="go"><a href="https://wickedsidekick.com">Visit wickedsidekick.com</a> <span class="meta">· the new site is launching soon</span></p>
+      </div>
+      <figure class="shot">
+        <img src="ws-hero.jpg" alt="The new Wicked Sidekick homepage: 'Help product teams decide what to build. Faster.' next to a table of top opportunities." width="1200" height="683">
+        <figcaption>The new Wicked Sidekick website I built, still in progress.</figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <section class="section" id="how" aria-labelledby="how-title">
+    <header>
+      <p class="label">My approach</p>
+      <h2 id="how-title">Viable, valuable, delivered</h2>
+      <p>Shaped by Marty Cagan’s work, and tested in my own. Every product I work on has to pass three tests.</p>
+    </header>
+    <ul class="pillars">
+      <li><span class="label">Viable</span><h3>Understand the business</h3><p>It has to work for the business: the market, the model and the numbers.</p><p class="proof"><span>For example</span>Grew Brightcove’s OTT business from $7M to $10M ARR, and helped shape the analytics strategy behind the Wicket Labs acquisition.</p></li>
+      <li><span class="label">Valuable &amp; usable</span><h3>Understand customers and users</h3><p>People have to want to use it, and someone has to want to buy it.</p><p class="proof"><span>For example</span>Built a 40+ customer design-partner program at Brightcove that increased engagement by 200–300%.</p></li>
+      <li><span class="label">Delivered</span><h3>Get things done</h3><p>Ideas only count once they’re in customers’ hands.</p><p class="proof"><span>For example</span>Delivered Broadcom’s AI workflow pilot 20% ahead of schedule, and took Cuebright from prototype to 15 releases in two months.</p></li>
+    </ul>
+    <div class="approach">
+      <h3>How I approach a new problem</h3>
+      <ol class="steps">
+        <li><span><b>Listen first.</b> Customers and users for their problems; internal stakeholders for the business and its constraints.<em>30+ user interviews and weekly pilot feedback at Broadcom.</em></span></li>
+        <li><span><b>Turn it into hypotheses.</b> What to build, for whom, and what has to be true for it to work.<em>At Broadcom, vague operational needs became hypotheses, success metrics and guardrails before anything was built.</em></span></li>
+        <li><span><b>Reduce the biggest risk first.</b> If we don’t know whether customers want it, test that. If we don’t know whether we can build it, engineering tackles that first.<em>Early validation at PTC avoided about six months of unnecessary development.</em></span></li>
+        <li><span><b>Work in small batches.</b> Small MVPs and quick experiments, before a team commits months.<em>Every Cuebright change was measured on 232 test questions; the ones that didn’t help were dropped.</em></span></li>
+      </ol>
+    </div>
+    <aside class="ai-note" aria-labelledby="ai-title">
+      <p class="label">What AI changes</p>
+      <h3 id="ai-title">Give teams context and outcomes, not tasks</h3>
+      <p>As AI changes how software gets built, the most useful thing a product manager gives a team is context: the user, the customer and the business. Then ask for outcomes, so the team can make more decisions on its own and move faster.</p>
+      <p>That’s how I build Cuebright. I set the outcome and the context, AI coding agents do the building, and every result is measured before it ships.</p>
+    </aside>
+  </section>
+
+  <section class="section" id="experience" aria-labelledby="exp-title">
+    <header>
+      <p class="label">Experience</p>
+      <h2 id="exp-title">Where I’ve done it</h2>
+    </header>
+    <ol class="timeline">
+      <li><span class="when">2025 – today</span><div><h3>Wicked Sidekick</h3><p class="role">Founder &amp; product lead</p><p class="note">Building an AI-native platform that turns customer conversations into traceable evidence and product-ready outputs.</p></div></li>
+      <li><span class="when">2025 – 2026</span><div><h3>Broadcom</h3><p class="role">Principal product manager, AI initiatives (contract)</p><p class="note">Led an AI-assisted enterprise workflow built on Gemini, BigQuery and retrieval-augmented generation, with human review. After 30+ user interviews and weekly pilot feedback, it cut task time by about half, shipped 20% ahead of schedule and won executive sponsorship.</p></div></li>
+      <li><span class="when">2020 – 2025</span><div><h3>Brightcove</h3><p class="role">Principal product manager</p><p class="note">Owned a $35M+ ARR portfolio across analytics, integrations and OTT apps. Rebuilt the Salesforce, HubSpot, Marketo and Eloqua integrations used by 125+ enterprise customers, protecting more than $25M ARR. Grew OTT from $7M to $10M ARR, and shaped the analytics strategy behind the acquisition of Wicket Labs.</p></div></li>
+      <li><span class="when">2017 – 2020</span><div><h3>PTC</h3><p class="role">UX design director, product strategy &amp; discovery</p><p class="note">Led discovery and UX strategy across IoT, augmented reality, PLM and CAD. Early validation saved about six months of development, and I helped launch an offering that earned about $1M in its first year.</p></div></li>
+      <li><span class="when">2012 – 2017</span><div><h3>Bentley University, User Experience Center</h3><p class="role">User experience consultant</p><p class="note">50+ research and product-strategy engagements for clients including Fidelity, TD Bank, Cisco and Siemens.</p></div></li>
+      <li><span class="when">2011 – 2012</span><div><h3>GoUsability</h3><p class="role">Founder &amp; UX consultant</p></div></li>
+    </ol>
+    <div class="edu">
+      <div><p class="label">Education</p><p>MBA, Bentley University (2016)<br>M.S. Engineering Physics with Human Factors, Luleå University of Technology (2010)</p></div>
+      <div><p class="label">Certifications</p><p>Certified ScrumMaster · Pragmatic Marketing · IBM Enterprise Design Thinking</p></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Let’s talk</h2>
+    <p>I’m always happy to talk about product discovery, creative MVPs, or what AI is changing about how software gets built.</p>
+    <div class="links">
+      <span class="email">nilsdavidjuhlin@gmail.com</span>
+      <a class="btn" href="https://www.linkedin.com/in/david-juhlin/">LinkedIn</a>
+      <a class="btn" href="resume.pdf">Résumé</a>
+    </div>
+  </section>
+
+  <footer><span>© 2026 David Juhlin</span><span>Sunrise, Florida</span></footer>
+</div>
